@@ -26,12 +26,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage : file\n");
+		dprintf(stderr, "Usage : file\n");
 		exit(EXIT_FAILURE);
 	}
 	if (!book)
 	{
-		fprintf(stderr, "Error: malloc failed");
+		dprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		dprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
