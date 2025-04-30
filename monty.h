@@ -34,7 +34,7 @@ extern stack_t *the_stack ;
 void push(int number);
 void pall(void);
 char* clean_line(char* intput_string);
-void process(char* command);
+void process(char* command, int line);
 
 #include <stdio.h>
 #include <string.h>
