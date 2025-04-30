@@ -4,10 +4,16 @@
 #include <fcntl.h>
 #include <stddef.h>
 #include <stdio.h>
+
+stack_t *the_stack = NULL; /* Global stack used throughout the program */
+
 /**
  * main - function for testing our knowledge
+ *
+ * @argc: number of inputs
+ * @argv: the input file
+ * Return: 0 on sucess
  */
-stack_t *the_stack = NULL;
 
 int main(int argc, char *argv[])
 {
@@ -50,6 +56,12 @@ int main(int argc, char *argv[])
 	close(fd);
 	return (0);
 }
+
+/**
+ * process - processing line command
+ * @command: the line commande
+ * @line: the line of that commande in the file
+ */
 
 void process(char *command, int line)
 {
